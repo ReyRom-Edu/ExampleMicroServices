@@ -7,13 +7,9 @@ namespace ProductService
 
         public ProductServiceDbContext(DbContextOptions<ProductServiceDbContext> options) : base(options)
         {
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
             Database.EnsureCreated();
         }
+
 
         public DbSet<Product> Products { get; set; }
     }
