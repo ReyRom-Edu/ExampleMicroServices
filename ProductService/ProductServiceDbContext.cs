@@ -9,9 +9,9 @@ namespace ProductService
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            base.OnConfiguring(optionsBuilder);
             Database.EnsureCreated();
         }
 
