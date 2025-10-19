@@ -7,6 +7,11 @@ namespace ProductService
 
         public ProductServiceDbContext(DbContextOptions<ProductServiceDbContext> options) : base(options)
         {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
             Database.EnsureCreated();
         }
 
