@@ -24,7 +24,7 @@ services:
       dockerfile: ProductService/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - CONNECTION_STRING=Server=productdb;Database=Products;User=root;Password=root;Port=3306 
+      - CONNECTION_STRING=Server=productdb;Database=Products;User=user;Password=user;Port=3306 
     depends_on:
       - productdb 
     links:
@@ -39,8 +39,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: Products
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
     volumes:
       - productdb:/var/lib/mysql
       - ./products_init.sql:/docker-entrypoint-initdb.d/products_init.sql:ro
