@@ -34,7 +34,7 @@ services:
 
   productdb:
     container_name: "productdb"
-    image: mysql:latest
+    image: mysql:8.1
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
