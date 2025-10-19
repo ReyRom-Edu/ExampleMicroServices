@@ -43,7 +43,7 @@ services:
       MYSQL_PASSWORD: root
     volumes:
       - productdb:/var/lib/mysql
-      - ./products_init.sql:/docker-entrypoint-initdb.d/products_init.sql
+      - ./products_init.sql:/docker-entrypoint-initdb.d/products_init.sql:ro
     networks:
       - net
 
