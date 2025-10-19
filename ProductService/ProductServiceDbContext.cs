@@ -7,7 +7,6 @@ namespace ProductService
 
         public ProductServiceDbContext(DbContextOptions<ProductServiceDbContext> options) : base(options)
         {
-            Database.EnsureCreated();
         }
 
 
