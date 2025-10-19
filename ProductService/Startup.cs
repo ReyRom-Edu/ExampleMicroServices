@@ -24,6 +24,8 @@ namespace ProductService
             // Маршрут для получения всех продуктов
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet("/api/products/isAlive", () => "Welcome to Product Service!");
+
                 endpoints.MapGet("/api/products", async (ProductServiceDbContext db) =>
                     await db.Products.ToListAsync());
 
