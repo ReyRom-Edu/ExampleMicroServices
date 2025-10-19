@@ -27,7 +27,7 @@ namespace ProductService
                 endpoints.MapGet("/api/products/isAlive", () => "Welcome to Product Service!");
 
                 // Получение всех продуктов
-                endpoints.MapGet("/api/products", async (ProductServiceDbContext db) =>
+                endpoints.MapGet("/api/products/list", async (ProductServiceDbContext db) =>
                 {
                     try
                     {
@@ -64,7 +64,7 @@ namespace ProductService
                 });
 
                 // Создание нового продукта
-                endpoints.MapPost("/api/products", async (Product product, ProductServiceDbContext db) =>
+                endpoints.MapPost("/api/products/add", async (Product product, ProductServiceDbContext db) =>
                 {
                     try
                     {

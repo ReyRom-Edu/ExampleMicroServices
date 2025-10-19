@@ -1,14 +1,14 @@
 ﻿{
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/products{everything}",
+      "DownstreamPathTemplate": "/api/products/{everything}",
       "DownstreamHostAndPorts": [
         {
           "Host": "productservice",
           "Port": 8080
         }
       ],
-      "UpstreamPathTemplate": "/products{everything}",
+      "UpstreamPathTemplate": "/products/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     }
     //,
