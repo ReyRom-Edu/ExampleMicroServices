@@ -44,6 +44,8 @@ services:
     volumes:
       - productdb:/var/lib/mysql
       - ./products_init.sql:/docker-entrypoint-initdb.d/products_init.sql:ro
+    ports:
+      - "3306:3306"  
     networks:
       - net
 
