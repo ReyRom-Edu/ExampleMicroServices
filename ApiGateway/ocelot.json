@@ -11,19 +11,6 @@
       "UpstreamPathTemplate": "/products/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
     }
-    //,
-    //{
-    //  "DownstreamPathTemplate": "/api/orders",
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "orderservice",
-    //      "Port": 8080
-    //    }
-    //  ],
-    //  "UpstreamPathTemplate": "/orders",
-    //  "UpstreamHttpMethod": [ "GET", "POST" ]
-    //}
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://192.168.1.145:5000"
